@@ -1,0 +1,116 @@
+body{
+    font-family: 'Xanh Mono', monospace;
+}
+/*animations*/
+@keyframes pulse{
+    to{
+        border: 1px solid #24525C;
+    }
+}
+@keyframes appear-left{
+    from {
+        opacity: 0;
+        transform: translateX(-15rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+@keyframes appear-right{
+    from {
+        opacity: 0;
+        transform: translateX(15rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+@keyframes join-left{
+    from {
+        transform: translateX(-50rem);
+    }
+    to {
+        transform: translateX(0rem);
+    }
+}
+@keyframes join-right{
+    from {
+        transform: translateX(50rem);
+    }
+    to {
+        transform: translateX(0rem);
+    }
+}
+/* */
+h1{
+    text-transform: uppercase;
+    font-size: 6rem;
+    padding-top: 5rem;
+    letter-spacing: 5rem;
+}
+/*main-header*/
+.main-header{
+    color: #24525C;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    background: #9BD4E1;
+    border-bottom: 2px solid #24525C;
+}
+.main-header__title{
+    animation: appear-left 2s ease-out;
+    text-align: left;
+    padding-left: 5rem;
+}
+.main-header__subtitle{
+    text-align: left;
+    font-style: italic;
+    padding-left: 5.5rem;
+    margin-top: -0.5rem;
+    opacity: 0.35;
+}
+.main-header__nav{
+    padding-top: 6rem;
+    display: flex;
+    justify-content: space-around;
+}
+.main-header__nav a{
+    opacity: .35;
+    color: #24525C;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+.main-header__nav a:hover{
+    opacity: 1;
+    border: 1px solid transparent;
+    padding: 0.2rem 0.5rem;
+    animation: pulse 1s infinite;
+}
+/*first-block*/
+.first-block{
+    color: #E67D65;
+    width: 100%;
+    height: 40rem;
+    background: #E0B1A6;
+}
+.first-block__title{
+    animation: appear-right 2s ease-out;
+    text-align: right;
+}
+.first-block__subtitle{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 4rem;
+    font-size: 3rem;
+    opacity: .5;
+}
+#left{
+    animation: join-left 3s ease-out;
+}
+#right{
+    animation: join-right 3s ease-out;
+}
